@@ -1,0 +1,48 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <RootNamespace>az_204_api</RootNamespace>
+        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.11"/>
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2"/>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Remove="1\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="1\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Remove="1\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="1\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="1\s\az-204-api\appsettings.Development.json" />
+      <_ContentIncludedByDefault Remove="1\s\az-204-api\appsettings.json" />
+      <_ContentIncludedByDefault Remove="1\s\az-204-api\bin\Release\net8.0\appsettings.Development.json" />
+      <_ContentIncludedByDefault Remove="1\s\az-204-api\bin\Release\net8.0\appsettings.json" />
+      <_ContentIncludedByDefault Remove="1\s\az-204-api\bin\Release\net8.0\az-204-api.deps.json" />
+      <_ContentIncludedByDefault Remove="1\s\az-204-api\bin\Release\net8.0\az-204-api.runtimeconfig.json" />
+      <_ContentIncludedByDefault Remove="1\s\az-204-api\bin\Release\net8.0\global.json" />
+      <_ContentIncludedByDefault Remove="1\s\az-204-api\global.json" />
+      <_ContentIncludedByDefault Remove="1\s\az-204-api\obj\az-204-api.csproj.nuget.dgspec.json" />
+      <_ContentIncludedByDefault Remove="1\s\az-204-api\obj\project.assets.json" />
+      <_ContentIncludedByDefault Remove="1\s\az-204-api\obj\Release\net8.0\az-204-api.sourcelink.json" />
+      <_ContentIncludedByDefault Remove="1\s\az-204-api\obj\Release\net8.0\staticwebassets.build.json" />
+      <_ContentIncludedByDefault Remove="1\s\az-204-api\Properties\launchSettings.json" />
+    </ItemGroup>
+
+</Project>

@@ -1,0 +1,26 @@
+﻿{
+  "build_artifactstagingdirectory": "1/a",
+  "agent_builddirectory": "1",
+  "collectionUrl": "https://dev.azure.com/lnalmeidadev/",
+  "definitionName": "AZ-204-API",
+  "repositoryTrackingInfo": [
+    {
+      "identifier": "self",
+      "repositoryType": "Git",
+      "repositoryUrl": "https://lnalmeidadev@dev.azure.com/lnalmeidadev/AZ-204-API/_git/AZ-204-API",
+      "sourcesDirectory": "1/s/AZ-204-API"
+    }
+  ],
+  "fileFormatVersion": 3,
+  "lastRunOn": "01/13/2025 23:29:48 -03:00",
+  "repositoryType": "Git",
+  "lastMaintenanceAttemptedOn": "",
+  "lastMaintenanceCompletedOn": "",
+  "build_sourcesdirectory": "1/s",
+  "common_testresultsdirectory": "1/TestResults",
+  "collectionId": "aa40245a-306b-4377-90f5-6199da3bb8dd",
+  "definitionId": "1",
+  "hashKey": "db48f0a2602326cee5cf7ee3b18f920191088aa2",
+  "repositoryUrl": "https://lnalmeidadev@dev.azure.com/lnalmeidadev/AZ-204-API/_git/AZ-204-API",
+  "system": "build"
+}

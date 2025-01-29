@@ -1,0 +1,46 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  name: selfHostedAgentPool
+  vmImage: ubuntu-latest
+
+variables:
+  solution: 'az-204-api/*.sln'
+  buildPlataform: 'Any CPU'
+  buildConfiguration: 'Release'
+
+steps:
+- checkout: self
+  fetchDepth: 1
+- task: UseDotNet@2
+  displayName: 'Install .NET SDK'
+  inputs:
+    packageType: 'sdk'
+    version: '8.x'
+
+- script: 
+    dotnet restore $(solution)
+  displayName: 'Restore solution'
+
+- script: |
+    dotnet build $(solution) --configuration $(buildConfiguration)
+  displayName: 'Build solution'
+
+- script:
+    dotnet test $(solution) --configuration $(buildConfiguration) --no-build --collect:"XPlat Code Coverage"
+  displayName: 'Test solution'
+
+- task: Docker@2
+  inputs:
+    containerRegistry: 'acraz204apidio'
+    repository: 'az-204-api-dio'
+    command: 'buildAndPush'
+    Dockerfile: './az-204-api/Dockerfile'
+  
+
